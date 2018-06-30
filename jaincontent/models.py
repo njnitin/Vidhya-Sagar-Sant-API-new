@@ -84,7 +84,7 @@ class Category(models.Model):
 	order_number = models.IntegerField(default = 100)
 
 
-	def __str__(self):
+	def __unicode__(self):
 		return str(self.name)
 
 
@@ -106,8 +106,8 @@ class SubCategory(models.Model):
 	logo = models.CharField(max_length=254, default="")
 	is_deleted =  models.BooleanField(default=False)
 	order_number = models.IntegerField(default = 100)
-	def __str__(self):
-		return str(self.name)
+	def __unicode__(self):
+		return unicode(self.name)
 
 
 
@@ -124,3 +124,6 @@ class Item(models.Model):
 	description =  models.TextField(null=True, blank=True)
 	is_deleted =  models.BooleanField(default=True)
 	order_number = models.IntegerField(default=100)
+
+	def __unicode__(self):
+		return unicode(self.title)
