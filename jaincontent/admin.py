@@ -25,7 +25,7 @@ admin.site.register(SubCategory, SubCategoryAdmin)
 
 class ItemAdmin(admin.ModelAdmin):
     model = Item
-    list_display = ('id', 'category_id', 'sub_category_id', 'title', 'subtitle', 'description', 'logo', 'link', 'created_time', 'emp_id')
+    list_display = ('id','is_deleted', 'category_id', 'sub_category_id', 'title', 'subtitle', 'description', 'logo', 'link', 'created_time', 'emp_id')
 
 
 admin.site.register(Item, ItemAdmin)

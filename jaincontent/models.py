@@ -55,8 +55,8 @@ class Employee(AbstractBaseUser, PermissionsMixin):
     def is_staff(self):
         return self.is_admin
 
-    def __str__(self):
-        return str(self.employee_id)
+    def __unicode__(self):
+        return unicode(self.employee_id)
 
 
 
@@ -85,7 +85,7 @@ class Category(models.Model):
 
 
 	def __unicode__(self):
-		return str(self.name)
+		return unicode(self.name)
 
 
 class SubCategory(models.Model):

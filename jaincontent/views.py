@@ -160,7 +160,7 @@ class ItemView(APIView):
             category_id = int(request.GET.get('category_id'))
         if 'sub_category_id' in request.GET:
             sub_category_id = int(request.GET.get('sub_category_id'))
-
+		
         if last_update != '':
             items = Item.objects.filter(created_time__gt=last_update, is_deleted=False).order_by('order_number','-created_time')
             serializer = GetItemSerializer(items, many=True)
