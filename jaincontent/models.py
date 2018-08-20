@@ -121,8 +121,10 @@ class Item(models.Model):
 	subtitle  = models.CharField(max_length=250)
 	logo = models.CharField(max_length=254, default="")
 	link = models.CharField(max_length=254, default="")
-	description =  models.TextField(null=True, blank=True)
-	is_deleted =  models.BooleanField(default=True)
+        description =  models.TextField(null=True, blank=True, default='<body background="https://image.ibb.co/d5kg7k/b57.png"> '
+                                                                       '\n \n \n \n \n \n <br /><br /><br /><br /><br /><br /><br '
+                                                                       '/><br /><br /></body>')
+        is_deleted =  models.BooleanField(default=True)
 	order_number = models.IntegerField(default=100)
 
 	def __unicode__(self):
